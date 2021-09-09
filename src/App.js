@@ -1,17 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from "./components/HeaderBlock/Header.js";
+import Footer from "./components/FooterBlock/Footer.js";
+import Layout from "./components/LayoutsBlock/Layout.js";
+
+import background from './img/bg3.jpg';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Hello, React!
-        </p>
-        
-      </header>
-    </div>
+    <>
+			<Header
+				title="This is title"
+				descr="This is description!"
+			/>
+			<Layout
+				title="This is title"
+				descr="Block 1"
+				urlBg={ background }
+			/>
+			<Layout
+				title="This is title"
+				descr="Block 2"
+				colorBg="#000"
+			/>
+			<Layout
+				title="This is title"
+				descr="Block 3"
+				urlBg={ background }
+			/>
+			<Footer />
+		</>
   );
 }
 
