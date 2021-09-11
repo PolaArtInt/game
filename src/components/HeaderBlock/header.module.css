@@ -84,7 +84,10 @@
 }
 
 .container p {
-	font-size: 28px;
+	display: flex;
+	justify-content: space-between;
+	padding: 20px 0px;
+	font-size: 22px;
 	font-weight: normal;
 	color: #fafafa;
 	line-height: 32px;
