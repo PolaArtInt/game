@@ -1,8 +1,9 @@
-import Header from "./components/HeaderBlock/Header.js";
-import Footer from "./components/FooterBlock/Footer.js";
-import Layout from "./components/LayoutsBlock/Layout.js";
+import Header from './components/HeaderBlock/Header.js';
+import Footer from './components/FooterBlock/Footer.js';
+import Layout from './components/LayoutsBlock/Layout.js';
 
-import background from './img/bg3.jpg';
+import background1 from './img/bg-1.jpg';
+import background2 from './img/bg-2.jpg';
 
 function App() {
   return (
@@ -14,17 +15,21 @@ function App() {
 			<Layout
 				title="This is title"
 				descr="Block 1"
-				urlBg={ background }
+				urlBg={ background1 }
 			/>
 			<Layout
 				title="This is title"
 				descr="Block 2"
-				colorBg="#000"
-			/>
+				colorBg="transparent"
+				>
+				<p>Lorem ipsum amet consectetur adipisicing elit. Unde, magni!</p>
+				<p>Lorem ipsum amet consectetur adipisicing elit. Unde, magni!</p>
+			</Layout>
+			
 			<Layout
 				title="This is title"
 				descr="Block 3"
-				urlBg={ background }
+				urlBg={ background2 }
 			/>
 			<Footer />
 		</>
