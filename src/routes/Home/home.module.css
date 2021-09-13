@@ -1,0 +1,17 @@
+.flex {
+	max-width: 900px;
+	margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex_img {
+	width: 60%;
+	margin: 30px 0 50px;
+}
+
+.flex_img:hover {
+	transition: all 0.5s ease-in-out;
+}
