@@ -14,11 +14,9 @@ import style from './home.module.css';
 
 
 const HomePage = ({ onChangePage }) => {
-
 	const appStyle = {style};
 
 	const handleClickButton = (page) => {
-		// console.log('<HomePage />');
 		onChangePage && onChangePage(page);
 	};
 

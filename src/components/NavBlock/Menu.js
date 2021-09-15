@@ -1,39 +1,45 @@
 import style from './menu.module.css';
 import cn from 'classnames';
 
-const Menu = ({ handleShowMenu, onShowMenu }) => {
-	const handleClick = () => {
-		handleShowMenu && handleShowMenu();
-	};
+const MENU = [
+	{
+		title: 'HOME',
+		to: '#welcome',
+	},
+	{
+		title: 'GAME',
+		to: '#game',
+	},
+	{
+		title: 'ABOUT',
+		to: '#about',
+	},
+	{
+		title: 'CONTACT',
+		to: '#contact',
+	},
+];
 
+const Menu = ({ isOpen }) => {
 	return (
 		<div>
-			<div className={cn(style.menuContainer, { [onShowMenu]: style.active })} onClick={handleClick}>
-				<div className={style.overlay}>
-					<div className={style.menuItems}>
+			<div className={cn(style.menuContainer, { 
+				[style.active]: isOpen === true,
+				[style.deactive]: isOpen === false
+			})}>
+				<div className={style.overlay} />
+					<div>
 						<ul>
-							<li>
-								<a href="#welcome">
-									HOME
-								</a>
-							</li>
-							<li>
-								<a href="#game">
-									GAME
-								</a>
-							</li>
-							<li>
-								<a href="#about">
-									ABOUT
-								</a>
-							</li>
-							<li>
-								<a href="#contact">
-									CONTACT
-								</a>
-							</li>
+							{
+								MENU.map(({title, to}, index) => (
+									<li key={index}>
+										<a href={to}>
+											{title}
+										</a>
+									</li>
+								))
+							}
 						</ul>
-					</div>
 				</div>
 			</div>
 		</div>
