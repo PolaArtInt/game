@@ -4,7 +4,7 @@
   right: 0;
   height: calc( 100vh - 120px );
   width: calc( 100vw - 120px );
-  background: #fafafa;
+  background: #fafafa00;
 }
 
 .menuContainer.active > .overlay {
@@ -46,6 +46,8 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+	opacity: 0;
+	z-index: -1;
 }
 
 .menuContainer::before,
@@ -157,7 +159,7 @@
 
 .menuContainer ul li a:hover::after {
   content: ' »';
-  color: #f300b4;
+  color: rgb(67, 158, 211);
 }
 
 .menuContainer a,
@@ -167,7 +169,7 @@
 
 .menuContainer a:hover,
 .menuContainer a:active {
-  color: #f300b4;
+  color: rgb(67, 158, 211);
 }
 
 @media only screen and (max-width: 649px) {
