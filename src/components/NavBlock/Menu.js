@@ -1,26 +1,32 @@
+import {Link} from 'react-router-dom';
+
 import style from './menu.module.css';
 import cn from 'classnames';
 
 const MENU = [
 	{
 		title: 'HOME',
-		to: '#welcome',
+		to: '/',
 	},
 	{
 		title: 'GAME',
-		to: '#game',
+		to: 'game',
 	},
 	{
 		title: 'ABOUT',
-		to: '#about',
+		to: 'about',
 	},
 	{
 		title: 'CONTACT',
-		to: '#contact',
+		to: 'contact',
 	},
 ];
 
-const Menu = ({ isOpen }) => {
+const Menu = ({ isOpen, onClickMenu, setOpen }) => {
+	const hideMenu = () => {
+		// setOpen(prevState => !prevState);
+		// onClickMenu();
+	}
 	return (
 		<div>
 			<div className={cn(style.menuContainer, { 
@@ -33,14 +39,14 @@ const Menu = ({ isOpen }) => {
 							{
 								MENU.map(({title, to}, index) => (
 									<li key={index}>
-										<a href={to}>
+										<Link to={to} onClick={hideMenu}>
 											{title}
-										</a>
+										</Link>
 									</li>
 								))
 							}
 						</ul>
-				</div>
+					</div>
 			</div>
 		</div>
 	);
